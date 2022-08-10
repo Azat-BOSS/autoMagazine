@@ -1,0 +1,136 @@
+.intro {
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(2, 1fr);
+  min-height: calc(100vh - 70px);
+  @media screen and(max-width: 1100px) {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 34px 264px
+  }
+  @media screen and(max-width: 550px) {
+    padding: 40px 20px
+  }
+		&__block-text {
+      max-width: 560px;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     margin: 0 80px;
+     @media screen and(max-width: 1100px) {
+     margin: 0;
+    }
+		}
+
+		&__upper-title {
+      margin: 0;
+      font-family: $fFam;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 19px;
+      line-height: 28px;
+      text-align: center;
+      text-transform: uppercase;
+      color: #E1FD2C;
+      @media screen and(max-width: 550px) {
+        font-size: 11px;
+        line-height: 14px;
+      }
+		}
+
+		&__title {
+      margin: 0;
+      font-family: $fFam;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 65px;
+      line-height: 73px;
+      text-align: center;
+      color: #E1FD2C;
+      margin-top: 30px;
+      @media screen and(max-width: 550px) {
+        font-size: 38px;
+        line-height: 50px;
+        margin-top: 36px;
+      }
+		}
+
+		&__paragraph {
+      margin: 0;
+      font-family: $fFam;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 19px;
+      line-height: 28px;
+      text-align: center;
+      text-transform: uppercase;
+      color: #E1FD2C;
+      margin-top: 51px;
+      @media screen and(max-width: 550px) {
+        font-size: 11px;
+        line-height: 14px;
+        margin-top: 30px;
+      }
+		}
+
+		&__button {
+      @include btnReset;
+      max-width: 560px;
+      width: 360px;
+      height: 64px;
+      border: 1px solid #E1FD2C;
+      /* text */
+      font-family: $fFam;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 60px;
+      text-align: center;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #E1FD2C;
+      margin: 60px auto 0;
+      transition: background-color, color .3s linear;
+      &:hover {
+        background-color: #E1FD2C;
+        color: #191D2C;
+      }
+      @media screen and(max-width: 1100px) {
+        position: absolute;
+        bottom: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 0;
+       }
+       @media screen and(max-width: 550px) {
+        width: 280px;
+        height: 64px;
+        bottom: 60px;
+      }
+		}
+
+		&__background {
+    background-image: url('../images/car.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    max-width: 720px;
+    height: 540px;
+    margin-top: 120px;
+    @media screen and(max-width: 1100px) {
+      max-width: 700px;
+      width: 100%;
+      margin-top: 100px;
+     }
+     @media screen and(max-width: 550px) {
+      max-width: 280px;
+      height: 202px;
+      margin-top: 60px;
+    }
+		}
+}
+
+
