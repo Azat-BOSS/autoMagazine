@@ -1,0 +1,232 @@
+.content { 
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  @media screen and(max-width: 1100px) {
+    grid-template-columns: 1fr;
+  }
+  &__gallery {
+    border-right: 1px solid #E1FD2C;
+    border-bottom: 1px solid #E1FD2C;
+    height: 687px;
+    @media screen and(max-width: 1100px) {
+      height: 691px;
+      border-bottom: none;
+    }
+    @media screen and(max-width: 550px) {
+     height: 320px;
+    }
+  }
+
+  &__gallery-container {
+    max-width: 720px;
+    overflow: hidden;
+    @media screen and(max-width: 1100px) {
+      margin: 0 auto;
+      margin: 34px 34px 50px 34px;
+    }
+    @media screen and(max-width: 550px) {
+      margin: 20px 20px 50px 20px;
+      max-width: 270px;
+     }
+  }
+
+  &__gallery-line {
+    display: flex;
+    transition: all .3s ease-in-out;
+  }
+  &__gallery-image {
+    width: 100%;
+    height: auto;
+    @media screen and(max-width: 550px) {
+      max-width: 280px;
+      width: 100%;
+      height: 204px;
+     }
+  }
+
+  &__gallery-block {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px;
+    @media screen and(max-width: 1100px) {
+      margin: 0 50px 50px 50px;
+    }
+    @media screen and(max-width: 550px) {
+      margin: 0 20px 20px 20px;
+     }
+  }
+
+  &__gallery-title {
+    margin: 0;
+    font-family: $fFam;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 46px;
+    line-height: 46px;
+    color: #E1FD2C;
+    @media screen and(max-width: 550px) {
+      font-size: 26px;
+      line-height: 26px;
+     }
+  }
+
+  &__gallery-button {
+    @include btnReset;
+    transition: opacity .2s linear;
+    &_back {
+      margin-right: 16px;
+    }
+    &:hover {
+      opacity: 0.6;
+    }
+    &_forward {
+      
+    }
+    img {
+      @media screen and(max-width: 550px) {
+        width: 24px;
+        height: 20px;
+       }
+    }
+  }
+
+
+  &__nothing {
+   
+    height: 687px;
+    @media screen and(max-width: 1100px) {
+     display: none;
+    }
+  }
+
+  &__media {
+    border-bottom: 1px solid #E1FD2C;
+    height: 500px;
+    @media screen and(max-width: 1100px) {
+      display: none;
+     }
+  }
+
+  &__media-title {
+    margin: 0;
+    font-family: $fFam;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 46px;
+    line-height: 46px;
+    color: #E1FD2C;
+    margin: 50px 0 0 50px;
+  }
+
+  &__read {
+    border: 1px solid #E1FD2C;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    @media screen and(max-width: 1100px) {
+     padding: 0 50px;
+    }
+    @media screen and(max-width: 550px) {
+      height: 287px;
+      padding: 0 20px;
+    }
+  }
+
+  &__read-text {
+    max-width: 668px;
+    margin: 50px auto;
+    padding: 0 50px;
+    overflow: hidden;
+    @media screen and(max-width: 550px) {
+     margin: 20px auto;
+     padding: 0;
+    }
+  }
+
+  &__read-line {
+    display: flex;
+  }
+ 
+
+  &__read-paragraph {
+    margin: 0;
+    font-family: $fFam;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 42px;
+    color: #E1FD2C;
+    &_disabled {
+      display: none;
+    }
+    @media screen and(max-width: 550px) {
+      font-size: 16px;
+      line-height: 27px;
+     }
+
+  }
+
+  &__read-bottom { 
+    max-width: 619px;
+    width: 100%;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 50px 50px 50px;
+    @media screen and(max-width: 1100px) {
+      max-width: 619px;
+    }
+    @media screen and(max-width: 550px) {
+      margin: 0 20px 20px 20px;
+    }
+  }
+
+  &__read-dots {
+    display: flex;
+  }
+
+  &__read-dot {
+    border: 1px solid #E1FD2C;
+    border-radius: 999px;
+    width: 12px;
+    height: 12px;
+    transition: .2s linear;
+    &:first-child {
+      margin-right: 15px;
+    }
+    &_active {
+      background-color: #E1FD2C;
+    }
+  }
+
+  &__read-button {
+    @include btnReset;
+    border: 1px solid #E1FD2C;
+    border-radius: 100px/50px;
+    width: 110px;
+    height: 52px;
+    /* text */
+    font-family: $fFam;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 28px;
+    text-align: center;
+    color: #E1FD2C;
+    transition: background-color, color .3s linear;
+    &:hover {
+      background-color: #E1FD2C;
+      color: #191D2C;
+    }
+    @media screen and(max-width: 1100px) {
+      width: 88px;
+      height: 42px;
+    }
+  }
+}
+
+
+
